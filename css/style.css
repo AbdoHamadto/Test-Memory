@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.address {
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    color: purple;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 5px;
+    background-color: #fbdf5a;
+    font-size: 30px;
+}
+
+.player {
+    display: flex;
+    justify-content: space-around;
+}
+
+.playerone,
+.playertwo,
+.reload,
+.countone,
+.counttwo {
+    background-color: #fbdf5a;
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    width: 20%;
+    font-size: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.reload {
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.reload:hover .r {
+    animation-name: reload;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes reload {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.boxs {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    gap: 20px;
+    perspective: 1500px;
+}
+
+.style {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.style .face {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+}
+
+.style .back {
+    transform: rotatey(180deg);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
